@@ -17,13 +17,23 @@
       min-height: 100vh;
       text-align: center;
     }
+
     header {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
     }
+
+    header img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+    }
+
     header h1 {
       font-size: 2.2em;
-      margin: 0;
+      margin: 15px 0 0 0;
     }
+
     main {
       background-color: rgba(255, 255, 255, 0.1);
       padding: 20px;
@@ -31,27 +41,29 @@
       max-width: 400px;
       width: 90%;
     }
+
     p {
       font-size: 1.1em;
       margin: 15px 0;
     }
-    .banner, .video {
-      margin: 20px 0;
+
+    .banner,
+    .video {
+      margin: 20px auto;
       width: 100%;
       max-width: 360px;
       height: 200px;
+      background: #fff;
       border-radius: 10px;
       overflow: hidden;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
     }
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+
     .cta {
       margin-top: 20px;
       padding: 12px 25px;
@@ -64,37 +76,39 @@
       text-decoration: none;
       display: inline-block;
     }
+
     .cta:hover {
       background-color: #ffaa00;
     }
   </style>
 </head>
 <body>
+
   <header>
+    <!-- Красива картинка -->
+    <img src="https://images.unsplash.com/photo-1529257414772-1960b7bea4eb?auto=format&fit=crop&w=800&q=70" alt="WiFi Image">
     <h1>Welcome to Free Wi-Fi!</h1>
   </header>
+
   <main>
     <p>Enjoy high-speed internet, sponsored by our partners:</p>
 
-    <!-- Банер через iframe -->
+    <!-- Банер -->
     <div class="banner">
       <iframe src="https://your-ad-network.com/banner.html" title="Ad Banner"></iframe>
     </div>
 
-    <!-- Відео-реклама через iframe -->
-<div style="width:100%; max-width:360px; height:200px; border-radius:10px; overflow:hidden; background:#000; margin:20px auto;">
-  <iframe 
-    src="https://www.youtube.com/embed/w38YKyy_lHI?autoplay=1&mute=1&controls=0&modestbranding=1&playsinline=1" 
-    frameborder="0" 
-    style="width:100%; height:100%;" 
-    allow="autoplay; encrypted-media"
-    allowfullscreen>
-  </iframe>
-</div>
+    <!-- Відео -->
+    <div class="video">
+      <iframe 
+        src="https://www.youtube.com/embed/w38YKyy_lHI?autoplay=1&mute=1&controls=0&modestbranding=1&playsinline=1"
+        allow="autoplay; encrypted-media"
+        allowfullscreen>
+      </iframe>
+    </div>
 
-
-    <!-- Кнопка для користувача -->
     <a href="#" class="cta">Continue to Internet</a>
   </main>
+
 </body>
 </html>
