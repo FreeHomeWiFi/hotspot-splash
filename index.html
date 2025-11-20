@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Free Wi-Fi Splash Page</title>
@@ -63,6 +62,7 @@
       border-radius: 8px;
       cursor: pointer;
       text-decoration: none;
+      display: inline-block;
     }
     .cta:hover {
       background-color: #ffaa00;
@@ -76,19 +76,20 @@
   <main>
     <p>Enjoy high-speed internet, sponsored by our partners:</p>
 
-    <!-- Банерна реклама -->
+    <!-- Банер через iframe -->
     <div class="banner">
-      <script src="https://adnetwork.com/script.js?pub=12345"></script>
-      <!-- Якщо банер через iframe -->
-      <!-- <iframe src="https://adnetwork.com/banner.html"></iframe> -->
+      <iframe src="https://your-ad-network.com/banner.html" title="Ad Banner"></iframe>
     </div>
 
-    <!-- Відео-реклама -->
+    <!-- Відео-реклама через iframe -->
     <div class="video">
-      <iframe src="https://www.youtube.com/embed/ZiGWZRDXCLc?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/ZiGWZRDXCLc?autoplay=1&mute=1" 
+              allow="autoplay; encrypted-media" 
+              allowfullscreen
+              title="Promo Video"></iframe>
     </div>
 
-    <!-- Кнопка для користувача, наприклад "Continue to Internet" -->
+    <!-- Кнопка для користувача -->
     <a href="#" class="cta">Continue to Internet</a>
   </main>
 </body>
