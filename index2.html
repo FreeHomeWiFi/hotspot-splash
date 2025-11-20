@@ -6,32 +6,65 @@
   <title>Free Wi-Fi Splash Page</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      background-color: #f2f2f2;
       margin: 0;
-      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
     }
     header {
-      background-color: #3498db;
-      color: white;
-      padding: 20px;
+      margin-bottom: 30px;
+    }
+    header h1 {
+      font-size: 2.2em;
+      margin: 0;
     }
     main {
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 20px;
+      border-radius: 15px;
+      max-width: 400px;
+      width: 90%;
     }
-    .banner {
-      margin: 20px auto;
-      width: 300px;
-      height: 250px;
-      border: 1px solid #ccc;
+    p {
+      font-size: 1.1em;
+      margin: 15px 0;
+    }
+    .banner, .video {
+      margin: 20px 0;
+      width: 100%;
+      max-width: 360px;
+      height: 200px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
       display: flex;
-      align-items: center;
       justify-content: center;
-      background-color: #fff;
+      align-items: center;
     }
     iframe {
-      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    .cta {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #ffbb33;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+    .cta:hover {
+      background-color: #ffaa00;
     }
   </style>
 </head>
@@ -40,21 +73,22 @@
     <h1>Welcome to Free Wi-Fi!</h1>
   </header>
   <main>
-    <p>Enjoy our internet. Check out this sponsor:</p>
-    
+    <p>Enjoy high-speed internet, sponsored by our partners:</p>
+
     <!-- Банерна реклама -->
     <div class="banner">
       <script src="https://adnetwork.com/script.js?pub=12345"></script>
-      <!-- або можна вставити iframe банера:
-      <iframe src="https://adnetwork.com/banner.html" frameborder="0"></iframe>
-      -->
+      <!-- Якщо банер через iframe -->
+      <!-- <iframe src="https://adnetwork.com/banner.html"></iframe> -->
     </div>
-    
+
     <!-- Відео-реклама -->
-    <p>Sponsored video:</p>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ZiGWZRDXCLc?rel=0&autoplay=1&mute=1" 
-      title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
-    </iframe>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/ZiGWZRDXCLc?autoplay=1&mute=1" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+
+    <!-- Кнопка для користувача, наприклад "Continue to Internet" -->
+    <a href="#" class="cta">Continue to Internet</a>
   </main>
 </body>
 </html>
